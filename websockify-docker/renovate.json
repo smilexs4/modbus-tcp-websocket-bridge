@@ -1,0 +1,36 @@
+{
+  "extends": ["github>jwnmulder/renovate-config"],
+  "assignees": ["jwnmulder"],
+  "packageRules": [
+    {
+      "matchDatasources": ["docker"],
+      "matchFileNames": ["Dockerfile"],
+      "pinDigests": true
+    },
+    {
+      "matchFileNames": [".pre-commit-config.yaml"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true,
+      "addLabels": ["automerge"]
+    },
+    {
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["python"],
+      "separateMinorPatch": true
+    },
+    {
+      "matchDatasources": ["docker"],
+      "matchPackageNames": "python",
+      "matchUpdateTypes": ["major", "minor"],
+      "dependencyDashboardApproval": true
+    },
+    {
+      "matchDatasources": ["docker"],
+      "matchPackageNames": "python",
+      "matchUpdateTypes": ["patch", "pin", "digest"],
+      "automerge": true,
+      "addLabels": ["automerge"],
+      "extends": ["schedule:weekly"]
+    }
+  ]
+}

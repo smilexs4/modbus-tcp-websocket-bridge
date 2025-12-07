@@ -1,0 +1,27 @@
+version: "3.8"
+services:
+  websockify:
+    build:
+      context: ./websockify-docker
+    ports:
+      - 8502:80
+    restart: always
+    networks:
+      - modbus
+    command: ["80", "modbus-server:502"]
+
+  modbus-server:
+    container_name: modbus-server
+    hostname: modbus-server
+    image: oitc/modbus-server:latest
+    restart: always
+    ports:
+      - "502:502"
+    networks:
+      - modbus
+    volumes:
+      - ./server_config.json:/app/modbus_server.json
+
+networks:
+  modbus:
+    driver: bridge

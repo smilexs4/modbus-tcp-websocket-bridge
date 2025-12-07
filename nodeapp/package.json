@@ -1,0 +1,16 @@
+{
+  "name": "modbus-tcp-websocket-bridge",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "jsmodbus": "^4.0.10",
+    "websocket-stream": "^5.5.2"
+  }
+}

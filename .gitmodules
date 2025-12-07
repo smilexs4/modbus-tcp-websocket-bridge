@@ -1,0 +1,3 @@
+[submodule "websockify-docker"]
+	path = websockify-docker
+	url = https://github.com/jwnmulder/websockify-docker.git

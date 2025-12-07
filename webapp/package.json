@@ -1,0 +1,19 @@
+{
+  "name": "webapp",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^7.2.4",
+    "vite-plugin-node-polyfills": "^0.24.0"
+  },
+  "dependencies": {
+    "jsmodbus": "^4.0.10",
+    "websocket-stream": "^5.5.2"
+  }
+}
