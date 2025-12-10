@@ -9,6 +9,8 @@ services:
     networks:
       - modbus
     command: ["80", "modbus-server:502"]
+    depends_on:
+      - modbus-server
 
   modbus-server:
     container_name: modbus-server
